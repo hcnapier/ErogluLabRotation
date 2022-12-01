@@ -14,3 +14,5 @@ hepa_36092.1_20221121_2 <- read.csv("Colocalization_20221121_63x_36092-1_hepacam
 hepa_36092.1_20221121_4 <- read.csv("Colocalization_20221121_63x_36092-1_hepacam-488_mcherry-594_dapi_4.csv")
 hepa_36092.1_20221121_3 <- read.csv("Colocalization_20221121_6xx_36092-1_hepacam-488_mcherry-594_dapi_3.csv")
 ## 34872-3 ----
+setwd("/Users/haileynapier/Work/Rotations/Rotation2_Eroglu/image_analysis/analysis_output/HepaCAM/34872-3")
+hepa_34872.3
