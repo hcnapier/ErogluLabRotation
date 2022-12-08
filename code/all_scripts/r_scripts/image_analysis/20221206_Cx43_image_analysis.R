@@ -105,7 +105,7 @@ ggplot(data = av_area_brain, aes(x = Genotype, y = AvAreaPuncta, fill = Brain)) 
                 aes(x = Genotype, ymin = mean-sd, ymax = mean+sd), width = 0.25) +
   geom_dotplot(binaxis = "y", 
                stackdir = "center") + 
-  labs(y="Average Puncta Area Per Image") + 
+  labs(y=bquote("Average Puncta Area Per Image " (pixels ^2))) + 
   scale_x_discrete(limits = level_order) +
   theme_minimal()
 
@@ -131,7 +131,6 @@ av_intden_summary <- av_intden_brain %>%
   data.frame()
 
 ## Plot ----
-# Not sure what the units are here either
 dodge <- position_dodge(width = 0.25)
 ggplot(data = av_intden_brain, aes(x = Genotype, y = AvPunctaIntDen, fill = Brain)) + 
   geom_dotplot(data = av_intden_label, 
@@ -144,6 +143,6 @@ ggplot(data = av_intden_brain, aes(x = Genotype, y = AvPunctaIntDen, fill = Brai
                 aes(x = Genotype, ymin = mean-sd, ymax = mean+sd), width = 0.25) +
   geom_dotplot(binaxis = "y", 
                stackdir = "center") +
-  labs(y="Average Puncta Integrated Density Per Image") + 
+  labs(y="Average Puncta Integrated Density Per Image (a.u.)") + 
   scale_x_discrete(limits = level_order) +
   theme_minimal()
