@@ -1,6 +1,7 @@
 # chd8 peak overlap with WT and KO chromatin states
 # Hailey Napier
 # November 29, 2022
+# Last modified December 8,2022
 
 # 0.0 Load packages ----
 install.packages("dplyr")
@@ -90,4 +91,25 @@ for(i in state_list){
 
 
 chisq_ind_states("E1")[[3]]
+
+
+# 6.0 Filter bed files for E4 and E5 to assign genes ----
+## KO ----
+overlap_KO_E4 <- overlap_KO %>%
+  filter(V4 == "E4")
+overlap_KO_E5 <- overlap_KO %>%
+  filter(V4 == "E5")
+## WT ----
+overlap_WT_E5 <- overlap_WT %>%
+  filter(V4 == "E5")
+overlap_WT_E4 <- overlap_WT %>%
+  filter(V4 == "E4")
+## save .bed files ----
+setwd("/Users/haileynapier/Work/Rotations/Rotation2_Eroglu/chd8_chromhmm/gene_id/state_overlap_files")
+write.table(overlap_WT_E4, "overlap_WT_E4.bed", col.names = F, row.names = F, quote = F, sep = "\t")
+write.table(overlap_WT_E5, "overlap_WT_E5.bed", col.names = F, row.names = F, quote = F, sep = "\t")
+write.table(overlap_KO_E4, "overlap_KO_E4.bed", col.names = F, row.names = F, quote = F, sep = "\t")
+write.table(overlap_KO_E5, "overlap_KO_E5.bed", col.names = F, row.names = F, quote = F, sep = "\t")
+
+
 
