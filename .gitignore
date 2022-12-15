@@ -13,3 +13,6 @@ Protocols/**
 future_is_annex/**
 image_analysis/**
 nlgn2_chromhmm/**
+chd8_chromhmm/**
+presentation_figures/**
+*.pptx
