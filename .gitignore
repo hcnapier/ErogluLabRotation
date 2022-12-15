@@ -16,3 +16,4 @@ nlgn2_chromhmm/**
 chd8_chromhmm/**
 presentation_figures/**
 *.pptx
+.DS_Store
