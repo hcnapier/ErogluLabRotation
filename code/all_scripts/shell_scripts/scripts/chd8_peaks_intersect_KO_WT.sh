@@ -14,7 +14,7 @@ cd /work/hcn4/nlgn2_mintchip_wd/chd8_overlap
 
 #Set up software
 module load Bedtools/2.30.0  
-homer="/work/hcn4/nlgn2_mintchip_wd/homer/bin"
+homer="/work/hcn4/nlgn2_mintchip_wd/software/homer/bin"
 
 #Convert .txt file of chd8 peaks to .bed file
 perl $homer/pos2bed.pl $chd8_in_dir/merged_chd8_1_peaks_igg_input.txt_chd8_2_peaks_igg_input.txt > $chd8_in_dir/merged_chd8_peaks.bed
